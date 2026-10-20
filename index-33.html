@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0d0d0d">
+<title>الخديوي | EL KHEDIWY - Luxury Men's Wear</title>
+<meta name="description" content="الخديوي للملابس الرجالي - أناقة ملكية وتصاميم عصرية تليق بك.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Cinzel:wght@600;700;900&display=swap');
+
+:root {
+  --gold: #d6b15c;
+  --gold-light: #f6e4ac;
+  --gold-dark: #8c6a21;
+  --bg-dark: #09090b;
+  --card-bg: #121215;
+  --card-border: rgba(214, 177, 92, 0.2);
+  --text-main: #f4f4f6;
+  --text-muted: #a1a1aa;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body { background-color: var(--bg-dark); color: var(--text-main); font-family: 'Cairo', sans-serif; overflow-x: hidden; line-height: 1.6; }
+a { color: inherit; text-decoration: none; }
+
+.top-line {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold-dark), var(--gold-light), var(--gold-dark), transparent);
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+}
+
+header {
+  position: sticky; top: 0; z-index: 90;
+  background: rgba(9, 9, 11, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--card-border);
+}
+
+.nav {
+  max-width: 1300px; margin: auto; padding: 16px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+.brand { display: flex; align-items: center; gap: 12px; }
+.monogram {
+  width: 44px; height: 44px; border: 1.5px solid var(--gold);
+  display: grid; place-items: center; transform: rotate(45deg);
+  box-shadow: 0 0 15px rgba(214, 177, 92, 0.2);
+  transition: transform 0.4s ease;
+}
+.brand:hover .monogram { transform: rotate(225deg); }
+.monogram span { transform: rotate(-45deg); font-weight: 900; font-size: 22px; color: var(--gold-light); }
+.brand-text h2 { font-size: 22px; font-weight: 900; color: #fff; letter-spacing: 1px; }
+.brand-text small { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 3px; color: var(--gold); display: block; }
+
+.nav-links { display: flex; gap: 28px; font-size: 14px; font-weight: 600; }
+.nav-links a:hover { color: var(--gold); }
+
+.btn-contact-header {
+  border: 1px solid var(--gold); padding: 8px 18px; border-radius: 4px;
+  color: var(--gold-light); font-size: 13px; font-weight: 700; transition: all 0.3s ease;
+}
+.btn-contact-header:hover { background: var(--gold); color: #000; box-shadow: 0 0 20px rgba(214, 177, 92, 0.4); }
+
+.hero {
+  position: relative; min-height: 80vh; display: flex; align-items: center;
+  background: radial-gradient(circle at 80% 20%, rgba(214, 177, 92, 0.12) 0%, transparent 50%), linear-gradient(180deg, #09090b 0%, #121218 100%);
+  padding: 60px 24px;
+}
+
+.hero-content {
+  max-width: 1300px; margin: auto; width: 100%;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;
+}
+
+.tagline { font-family: 'Cinzel', serif; color: var(--gold); font-size: 13px; letter-spacing: 4px; display: inline-block; margin-bottom: 12px; }
+.hero h1 { font-size: clamp(48px, 6vw, 82px); font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+.hero h1 span {
+  color: var(--gold-light);
+  background: linear-gradient(135deg, #fff 0%, var(--gold-light) 50%, var(--gold) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.hero p { color: var(--text-muted); font-size: 16px; max-width: 500px; margin-bottom: 32px; }
+.hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold)); color: #0d0d0d;
+  padding: 14px 32px; font-weight: 800; font-size: 14px; border-radius: 4px; transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(214, 177, 92, 0.25);
+}
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(214, 177, 92, 0.4); }
+
+.btn-secondary {
+  border: 1px solid rgba(212, 175, 55, 0.5); color: #fff;
+  padding: 14px 32px; font-weight: 700; font-size: 14px; border-radius: 4px; transition: all 0.3s ease;
+}
+.btn-secondary:hover { border-color: var(--gold); background: rgba(214, 177, 92, 0.08); }
+
+.hero-seal { display: flex; justify-content: center; }
+.seal-ring {
+  width: 300px; height: 300px; border: 1px solid var(--card-border); border-radius: 50%;
+  display: grid; place-items: center; position: relative;
+  box-shadow: inset 0 0 50px rgba(214, 177, 92, 0.05);
+}
+.seal-ring::before { content: ""; position: absolute; inset: 15px; border: 1px dashed var(--gold); border-radius: 50%; opacity: 0.5; }
+.seal-center { text-align: center; }
+.seal-crown { font-size: 50px; color: var(--gold); margin-bottom: -10px; }
+.seal-center h3 { font-size: 38px; font-weight: 900; color: var(--gold-light); }
+.seal-center small { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 5px; color: var(--text-muted); }
+
+.section { max-width: 1300px; margin: auto; padding: 80px 24px; }
+.section-header { text-align: center; margin-bottom: 40px; }
+.section-header small { font-family: 'Cinzel', serif; color: var(--gold); letter-spacing: 3px; font-size: 12px; }
+.section-header h2 { font-size: 36px; font-weight: 800; margin-top: 6px; }
+
+.filters { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
+.filter-btn {
+  background: var(--card-bg); border: 1px solid var(--card-border); color: var(--text-muted);
+  padding: 10px 24px; border-radius: 30px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.3s ease;
+}
+.filter-btn.active, .filter-btn:hover { background: var(--gold); color: #000; border-color: var(--gold); font-weight: 800; }
+
+.product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 25px; }
+.product-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; overflow: hidden; transition: all 0.4s ease; }
+.product-card:hover { transform: translateY(-8px); border-color: var(--gold); box-shadow: 0 12px 30px rgba(0,0,0,0.5), 0 0 20px rgba(214, 177, 92, 0.15); }
+
+.product-img-wrapper { position: relative; width: 100%; aspect-ratio: 3/4; background: #18181c; overflow: hidden; }
+.product-img-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); }
+.product-card:hover .product-img-wrapper img { transform: scale(1.08); }
+
+.product-tag { position: absolute; top: 12px; right: 12px; background: rgba(9, 9, 11, 0.85); border: 1px solid var(--gold); color: var(--gold-light); font-family: 'Cinzel', serif; font-size: 11px; padding: 4px 10px; border-radius: 3px; }
+.product-details { padding: 18px; }
+.product-cat { color: var(--gold); font-size: 11px; font-weight: 700; }
+.product-title { font-size: 16px; font-weight: 700; margin: 6px 0 16px; color: #fff; }
+
+.btn-inquire {
+  width: 100%; background: transparent; border: 1px solid var(--card-border); color: var(--gold-light);
+  padding: 10px; font-size: 13px; font-weight: 700; border-radius: 4px; cursor: pointer; transition: all 0.3s ease;
+}
+.btn-inquire:hover { background: var(--gold); color: #000; border-color: var(--gold); }
+
+.contact-container {
+  background: linear-gradient(135deg, #121217 0%, #1a1a24 100%); border: 1px solid var(--gold);
+  border-radius: 12px; padding: 50px 30px; text-align: center; max-width: 850px; margin: auto;
+}
+.contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin: 35px 0; }
+.contact-item { background: rgba(9, 9, 11, 0.6); padding: 20px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.05); }
+.contact-item h4 { color: var(--gold); font-size: 13px; margin-bottom: 8px; }
+.contact-item p { font-size: 15px; font-weight: 700; }
+
+footer { border-top: 1px solid var(--card-border); padding: 40px 24px; text-align: center; background: #050507; }
+footer h3 { font-size: 26px; color: var(--gold); margin-bottom: 8px; }
+footer p { color: var(--text-muted); font-size: 13px; }
+.copyright { margin-top: 25px; font-size: 11px; color: #555; }
+
+@media (max-width: 768px) {
+  .hero-content { grid-template-columns: 1fr; text-align: center; }
+  .hero p { margin: auto auto 32px; }
+  .hero-btns { justify-content: center; }
+  .nav-links { display: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="top-line"></div>
+
+<header>
+  <nav class="nav">
+    <a href="#home" class="brand">
+      <div class="monogram"><span>خ</span></div>
+      <div class="brand-text">
+        <h2>الخديوي</h2>
+        <small>EL KHEDIWY</small>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#home">الرئيسية</a>
+      <a href="#collection">التشكيلة</a>
+      <a href="#contact">تواصل معنا</a>
+    </div>
+    <a href="tel:+201016588166" class="btn-contact-header">اتصل بنا ☎</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div>
+        <span class="tagline">EXCLUSIVE MEN'S WEAR</span>
+        <h1>الخديوي <span>فخامة واعتزاز</span></h1>
+        <p>تشكيلة رجالي فاخرة صُممت لتمنحك حضوراً مميزاً وإطلالة تعبر عن شخصيتك وتفردك.</p>
+        <div class="hero-btns">
+          <a href="#collection" class="btn-primary">استكشف الكولكشن ↙</a>
+          <a href="#contact" class="btn-secondary">عنوان المتجر</a>
+        </div>
+      </div>
+      <div class="hero-seal">
+        <div class="seal-ring">
+          <div class="seal-center">
+            <div class="seal-crown">♛</div>
+            <h3>الخديوي</h3>
+            <small>MEN'S FASHION</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="collection">
+    <div class="section-header">
+      <small>SELECT YOUR LOOK</small>
+      <h2>كولكشن الموسم</h2>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" onclick="filterItems('all', event)">الكل (31 قطعة)</button>
+      <button class="filter-btn" onclick="filterItems('casual', event)">كاجوال</button>
+      <button class="filter-btn" onclick="filterItems('classic', event)">كلاسيك</button>
+      <button class="filter-btn" onclick="filterItems('street', event)">ستايل شبابي</button>
+    </div>
+
+    <div class="product-grid" id="productGrid"></div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="contact-container">
+      <small style="color: var(--gold); font-family: 'Cinzel', serif; letter-spacing: 3px;">VISIT OUR STORE</small>
+      <h2 style="font-size: 30px; margin-top: 5px;">الخديوي للملابس الرجالي</h2>
+      
+      <div class="contact-info">
+        <div class="contact-item">
+          <h4>📍 العنوان</h4>
+          <p>أمام حلواني طيبة، بشارع القطاع</p>
+        </div>
+        <div class="contact-item">
+          <h4>📱 هاتف / واتساب</h4>
+          <p dir="ltr">+20 10 16588166</p>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+        <a href="tel:+201016588166" class="btn-primary">اتصال تلفوني ☎</a>
+        <a href="https://wa.me/201016588166" target="_blank" class="btn-secondary">محادثة واتساب ✆</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <h3>الخديوي</h3>
+  <p>EL KHEDIWY · LUXURY MEN'S STYLE</p>
+  <div class="copyright">جميع الحقوق محفوظة © <span id="year"></span> الخديوي</div>
+</footer>
+
+<script>
+// إنشاء الـ 31 منتج مع ربط أسماء الصور تلقائياً (img1.jpg, img2.jpg, ... img31.jpg)
+const products = Array.from({length: 31}, (_, i) => {
+  const n = i + 1;
+  const category = n % 3 === 1 ? 'casual' : n % 3 === 2 ? 'classic' : 'street';
+  const label = category === 'casual' ? 'كاجوال' : category === 'classic' ? 'كلاسيك' : 'ستايل شبابي';
+  return {
+    id: n,
+    name: `موديل الخديوي ${String(n).padStart(2, '0')}`,
+    cat: category,
+    catLabel: label,
+    tag: `LOOK ${String(n).padStart(2, '0')}`,
+    img: `img${n}.jpg` // بياخد الصور img1.jpg حتى img31.jpg
+  };
+});
+
+function renderProducts(items) {
+  const grid = document.getElementById('productGrid');
+  grid.innerHTML = items.map(p => `
+    <article class="product-card">
+      <div class="product-img-wrapper">
+        <img src="${p.img}" alt="${p.name} - الخديوي" loading="lazy">
+        <span class="product-tag">${p.tag}</span>
+      </div>
+      <div class="product-details">
+        <span class="product-cat">${p.catLabel}</span>
+        <h3 class="product-title">${p.name}</h3>
+        <button class="btn-inquire" onclick="inquireWhatsApp('${p.name}')">
+          استفسر عن القطعة 💬
+        </button>
+      </div>
+    </article>
+  `).join('');
+}
+
+function filterItems(category, event) {
+  document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+  if(event) event.target.classList.add('active');
+  
+  if (category === 'all') {
+    renderProducts(products);
+  } else {
+    const filtered = products.filter(p => p.cat === category);
+    renderProducts(filtered);
+  }
+}
+
+function inquireWhatsApp(name) {
+  const message = `السلام عليكم، حابب أستفسر عن قطعة: ${name} من كولكشن الخديوي.`;
+  window.open(`https://wa.me/201016588166?text=${encodeURIComponent(message)}`, '_blank');
+}
+
+document.getElementById('year').textContent = new Date().getFullYear();
+renderProducts(products);
+</script>
+
+</body>
+</html>
